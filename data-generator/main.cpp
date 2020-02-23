@@ -220,7 +220,7 @@ QByteArray generateMeta(Settings* set)
         size["name"] = "Size";
         size["bits"] = 3;
         size["datatype"] = "enum";
-        size["desc"] = "Type of the element";
+        size["desc"] = "Size of the element";
         QJsonArray valuesS;
         valuesS.append("Class 1");
         valuesS.append("Class 2");
@@ -236,7 +236,7 @@ QByteArray generateMeta(Settings* set)
         orientation["name"] = "Orientation";
         orientation["bits"] = 3;
         orientation["datatype"] = "enum";
-        orientation["desc"] = "Type of the element";
+        orientation["desc"] = "Orientation of the element";
         QJsonArray valuesO;
         valuesO.append("Random");
         valuesO.append("Front");

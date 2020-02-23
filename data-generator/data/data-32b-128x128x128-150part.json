@@ -26,9 +26,9 @@
                     ]
                 },
                 {
-                    "bits": 2,
+                    "bits": 3,
                     "datatype": "enum",
-                    "desc": "Type of the element",
+                    "desc": "Size of the element",
                     "name": "Size",
                     "values": [
                         "Class 1",
@@ -42,9 +42,9 @@
                     ]
                 },
                 {
-                    "bits": 2,
+                    "bits": 3,
                     "datatype": "enum",
-                    "desc": "Type of the element",
+                    "desc": "Orientation of the element",
                     "name": "Orientation",
                     "values": [
                         "Random",
