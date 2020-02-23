@@ -1,0 +1,82 @@
+{
+    "general": {
+        "bits": 32,
+        "depth": 128,
+        "height": 128,
+        "info": "Binary file contains synthetic volumetric data for VPT renderer.",
+        "particles": 150,
+        "width": 128
+    },
+    "layout": [
+        {
+            "bits": 8,
+            "datatype": "complex",
+            "desc": "Header byte of a cell.",
+            "layout": [
+                {
+                    "bits": 2,
+                    "datatype": "enum",
+                    "desc": "Type of the element",
+                    "name": "Type",
+                    "values": [
+                        "Undefined",
+                        "Sphere",
+                        "Ellipsoid",
+                        "Box"
+                    ]
+                },
+                {
+                    "bits": 2,
+                    "datatype": "enum",
+                    "desc": "Type of the element",
+                    "name": "Size",
+                    "values": [
+                        "Class 1",
+                        "Class 2",
+                        "Class 3",
+                        "Class 4",
+                        "Class 5",
+                        "Class 6",
+                        "Class 7",
+                        "Class 8"
+                    ]
+                },
+                {
+                    "bits": 2,
+                    "datatype": "enum",
+                    "desc": "Type of the element",
+                    "name": "Orientation",
+                    "values": [
+                        "Random",
+                        "Front",
+                        "Left",
+                        "Up",
+                        "Down",
+                        "Back",
+                        "Diagonal",
+                        "Random"
+                    ]
+                }
+            ],
+            "name": "Header"
+        },
+        {
+            "bits": 8,
+            "datatype": "byte",
+            "desc": "ID of the element presented in the current cell.",
+            "name": "ID"
+        },
+        {
+            "bits": 8,
+            "datatype": "byte",
+            "desc": "Value of the element presented in the current cell.",
+            "name": "Value"
+        },
+        {
+            "bits": 8,
+            "datatype": "byte",
+            "desc": "Zeros used for padding.",
+            "name": "Padding"
+        }
+    ]
+}

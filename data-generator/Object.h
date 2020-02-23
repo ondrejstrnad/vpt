@@ -24,6 +24,32 @@ public:
         this->_type = type;
         this->_orientation = orientation;
         this->_size = size;
+
+        switch(orientation) {
+            default:
+            case 0: // random rotation
+            case 7:
+                this->_rotation = QQuaternion::fromEulerAngles(qrand() % 360 - 180, qrand() % 360 - 180, qrand() % 360 - 180);
+                break;
+            case 1: // no rotation // front - yaw
+                this->_rotation = QQuaternion::fromEulerAngles(0, 0, 0);
+                break;
+            case 2: // left - roll
+                this->_rotation = QQuaternion::fromEulerAngles(0, 0, 90);
+                break;
+            case 3: // up - pitch
+                this->_rotation = QQuaternion::fromEulerAngles(90, 0, 0);
+                break;
+            case 4: // down - pitch
+                this->_rotation = QQuaternion::fromEulerAngles(-90, 0, 0);
+                break;
+            case 5: // back - yaw
+                this->_rotation = QQuaternion::fromEulerAngles(0, -180, 0);
+                break;
+            case 6: // diagonal
+                this->_rotation = QQuaternion::fromEulerAngles(45, 45, 45);
+                break;
+        }
     }
 
     inline QVector3D getPosition() { return _position; }

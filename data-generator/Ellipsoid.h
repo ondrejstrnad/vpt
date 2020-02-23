@@ -12,22 +12,32 @@ class Ellipsoid : public Object {
 private:
     QVector3D _size;
 public:
-    Ellipsoid(uchar id, QVector3D position, char value, uchar size, uchar orientation)
+    Ellipsoid(uchar id, QVector3D position, uchar value, uchar size, uchar orientation)
         : Object(id, 2, position, value, size, orientation) {
         switch(size) {
             case 0:
+                this->_size = QVector3D(0.02f, 0.05f, 0.03f);
+                break;
             case 1:
+                this->_size = QVector3D(0.07f, 0.08f, 0.04f);
+                break;
             case 2:
-                this->_size = QVector3D(0.05, 0.2, 0.07);
+                this->_size = QVector3D(0.08f, 0.02f, 0.04f);
                 break;
             case 3:
+                this->_size = QVector3D(0.05f, 0.2f, 0.07f);
+                break;
             case 4:
-                this->_size = QVector3D(0.02, 0.1, 0.03);
+                this->_size = QVector3D(0.02f, 0.1f, 0.03f);
                 break;
             case 5:
+                this->_size = QVector3D(0.05f, 0.12f, 0.03f);
+                break;
             case 6:
+                this->_size = QVector3D(0.07f, 0.16f, 0.07f);
+                break;
             case 7:
-                this->_size = QVector3D(0.07, 0.08, 0.1);
+                this->_size = QVector3D(0.07f, 0.08f, 0.1f);
                 break;        
         }
     }

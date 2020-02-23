@@ -17,20 +17,28 @@ public:
         : Object(id, 1, position, value, size, orientation) {
         switch(size) {
             case 0:
+                this->_radius = 0.01f;
+                break;
             case 1:
-                this->_radius = 0.03;
+                this->_radius = 0.02f;
                 break;
             case 2:
+                this->_radius = 0.03f;
+                break;
             case 3:
-                this->_radius = 0.05;
+                this->_radius = 0.04f;
                 break;
             case 4:
+                this->_radius = 0.05f;
+                break;
             case 5:
-                this->_radius = 0.08;
+                this->_radius = 0.08f;
                 break;
             case 6:
+                this->_radius = 0.10f;
+                break;
             case 7:
-                this->_radius = 0.12;
+                this->_radius = 0.12f;
                 break;
         }
     }

@@ -12,52 +12,35 @@ class Box : public Object {
 private:
     QVector3D _size;
 public:
-    Box(uchar id, QVector3D position, char value, uchar size, uchar orientation)
+    Box(uchar id, QVector3D position, uchar value, uchar size, uchar orientation)
         : Object(id, 3, position, value, size, orientation) {
 
         switch(size) {
             case 0:
-            case 1:
-            case 2:
-                this->_size = QVector3D(0.03, 0.06, 0.09);
+                this->_size = QVector3D(0.05f, 0.03f, 0.06f);
                 break;
-            case 3:                
+            case 1:
+                this->_size = QVector3D(0.03f, 0.04f, 0.05f);
+                break;
+            case 2:
+                this->_size = QVector3D(0.04f, 0.1f, 0.03f);
+                break;
+            case 3:
+                this->_size = QVector3D(0.02f, 0.08f, 0.05f);
+                break;
             case 4:
+                this->_size = QVector3D(0.03f, 0.06f, 0.09f);
+                break;
             case 5:
-                this->_size = QVector3D(0.11, 0.05, 0.04);
+                this->_size = QVector3D(0.11f, 0.05f, 0.04f);
                 break;
             case 6:
+                this->_size = QVector3D(0.04f, 0.06f, 0.04f);
+                break;
             case 7:
-                this->_size = QVector3D(0.05, 0.12, 0.2);
+                this->_size = QVector3D(0.05f, 0.12f, 0.2f);
                 break;        
-        }
-
-        switch(orientation) {
-            default:
-            case 0: // random rotation
-            case 7:
-                this->_rotation = QQuaternion::fromEulerAngles(qrand() % 360 - 180, qrand() % 360 - 180, qrand() % 360 - 180);
-                break;
-            case 1: // no rotation // front - yaw
-                this->_rotation = QQuaternion::fromEulerAngles(0, 0, 0);
-                break;
-            case 2: // left - roll
-                this->_rotation = QQuaternion::fromEulerAngles(0, 0, 90);
-                break;
-            case 3: // up - pitch
-                this->_rotation = QQuaternion::fromEulerAngles(90, 0, 0);
-                break;
-            case 4: // down - pitch
-                this->_rotation = QQuaternion::fromEulerAngles(-90, 0, 0);
-                break;
-            case 5: // back - yaw
-                this->_rotation = QQuaternion::fromEulerAngles(0, -180, 0);
-                break;
-            case 6: // diagonal
-                this->_rotation = QQuaternion::fromEulerAngles(45, 45, 45);
-                break;
-        }
-
+        }      
     }
     //inline QVector3D getDimensions() { return _size; }
 
