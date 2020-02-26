@@ -1,0 +1,115 @@
+{
+    "general": {
+        "bits": 8,
+        "depth": 128,
+        "height": 128,
+        "info": "Binary file contains synthetic volumetric data for VPT renderer.",
+        "particles": 150,
+        "width": 128
+    },
+    "layout": [
+        {
+            "bits": 8,
+            "datatype": "byte",
+            "desc": "Value of the element presented in the current cell.",
+            "name": "Value"
+        }
+    ],
+    "stats": {
+        "elements": {
+            "Box": {
+                "Orientation": {
+                    "Back": 3,
+                    "Diagonal": 4,
+                    "Down": 3,
+                    "Front": 4,
+                    "InverseDiagonal": 4,
+                    "Left": 6,
+                    "Random": 7,
+                    "Up": 7
+                },
+                "Size": {
+                    "Class 1": 8,
+                    "Class 2": 5,
+                    "Class 3": 4,
+                    "Class 4": 2,
+                    "Class 5": 7,
+                    "Class 6": 6,
+                    "Class 7": 2,
+                    "Class 8": 4
+                }
+            },
+            "Ellipsoid": {
+                "Orientation": {
+                    "Back": 5,
+                    "Diagonal": 8,
+                    "Down": 12,
+                    "Front": 3,
+                    "InverseDiagonal": 9,
+                    "Left": 6,
+                    "Random": 8,
+                    "Up": 12
+                },
+                "Size": {
+                    "Class 1": 8,
+                    "Class 2": 6,
+                    "Class 3": 8,
+                    "Class 4": 11,
+                    "Class 5": 9,
+                    "Class 6": 5,
+                    "Class 7": 8,
+                    "Class 8": 8
+                }
+            },
+            "Sphere": {
+                "Orientation": {
+                    "Back": 6,
+                    "Diagonal": 7,
+                    "Down": 6,
+                    "Front": 9,
+                    "InverseDiagonal": 2,
+                    "Left": 9,
+                    "Random": 6,
+                    "Up": 4
+                },
+                "Size": {
+                    "Class 1": 9,
+                    "Class 2": 6,
+                    "Class 3": 9,
+                    "Class 4": 9,
+                    "Class 5": 8,
+                    "Class 6": 4,
+                    "Class 7": 2,
+                    "Class 8": 2
+                }
+            }
+        },
+        "global": {
+            "Orientation": {
+                "Back": 14,
+                "Diagonal": 19,
+                "Down": 21,
+                "Front": 16,
+                "InverseDiagonal": 15,
+                "Left": 21,
+                "Random": 21,
+                "Up": 23
+            },
+            "Size": {
+                "Class 1": 25,
+                "Class 2": 17,
+                "Class 3": 21,
+                "Class 4": 22,
+                "Class 5": 24,
+                "Class 6": 15,
+                "Class 7": 12,
+                "Class 8": 14
+            },
+            "Type": {
+                "Box": 38,
+                "Ellipsoid": 63,
+                "Sphere": 49
+            }
+        }
+    }
+}

@@ -14,7 +14,7 @@ private:
     float _radius;
 public:
     Sphere(uchar id, QVector3D position, uchar value, uchar size, uchar orientation)
-        : Object(id, 1, position, value, size, orientation) {
+        : Object(id, "Sphere", 1, position, value, size, orientation) {
         switch(size) {
             case 0:
                 this->_radius = 0.01f;

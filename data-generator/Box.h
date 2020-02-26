@@ -13,7 +13,7 @@ private:
     QVector3D _size;
 public:
     Box(uchar id, QVector3D position, uchar value, uchar size, uchar orientation)
-        : Object(id, 3, position, value, size, orientation) {
+        : Object(id, "Box", 3, position, value, size, orientation) {
 
         switch(size) {
             case 0:

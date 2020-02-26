@@ -2,3 +2,4 @@ node_modules
 package-lock.json
 build
 settings
+build-data-generator-Qt_5_14_0_msvc2017_64-Debug/

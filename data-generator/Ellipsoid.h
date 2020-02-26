@@ -13,7 +13,7 @@ private:
     QVector3D _size;
 public:
     Ellipsoid(uchar id, QVector3D position, uchar value, uchar size, uchar orientation)
-        : Object(id, 2, position, value, size, orientation) {
+        : Object(id, "Ellipsoid", 2, position, value, size, orientation) {
         switch(size) {
             case 0:
                 this->_size = QVector3D(0.02f, 0.05f, 0.03f);

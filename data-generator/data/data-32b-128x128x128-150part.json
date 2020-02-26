@@ -54,7 +54,7 @@
                         "Down",
                         "Back",
                         "Diagonal",
-                        "Random"
+                        "InverseDiagonal"
                     ]
                 }
             ],
@@ -78,5 +78,102 @@
             "desc": "Zeros used for padding.",
             "name": "Padding"
         }
-    ]
+    ],
+    "stats": {
+        "elements": {
+            "Box": {
+                "Orientation": {
+                    "Back": 5,
+                    "Diagonal": 5,
+                    "Down": 4,
+                    "Front": 6,
+                    "InverseDiagonal": 1,
+                    "Left": 2,
+                    "Random": 4,
+                    "Up": 4
+                },
+                "Size": {
+                    "Class 1": 4,
+                    "Class 2": 6,
+                    "Class 3": 7,
+                    "Class 4": 0,
+                    "Class 5": 6,
+                    "Class 6": 3,
+                    "Class 7": 4,
+                    "Class 8": 1
+                }
+            },
+            "Ellipsoid": {
+                "Orientation": {
+                    "Back": 13,
+                    "Diagonal": 9,
+                    "Down": 3,
+                    "Front": 7,
+                    "InverseDiagonal": 11,
+                    "Left": 7,
+                    "Random": 13,
+                    "Up": 9
+                },
+                "Size": {
+                    "Class 1": 10,
+                    "Class 2": 9,
+                    "Class 3": 8,
+                    "Class 4": 10,
+                    "Class 5": 12,
+                    "Class 6": 1,
+                    "Class 7": 14,
+                    "Class 8": 8
+                }
+            },
+            "Sphere": {
+                "Orientation": {
+                    "Back": 9,
+                    "Diagonal": 5,
+                    "Down": 6,
+                    "Front": 7,
+                    "InverseDiagonal": 8,
+                    "Left": 1,
+                    "Random": 7,
+                    "Up": 4
+                },
+                "Size": {
+                    "Class 1": 13,
+                    "Class 2": 4,
+                    "Class 3": 7,
+                    "Class 4": 6,
+                    "Class 5": 6,
+                    "Class 6": 8,
+                    "Class 7": 1,
+                    "Class 8": 2
+                }
+            }
+        },
+        "global": {
+            "Orientation": {
+                "Back": 27,
+                "Diagonal": 19,
+                "Down": 13,
+                "Front": 20,
+                "InverseDiagonal": 20,
+                "Left": 10,
+                "Random": 24,
+                "Up": 17
+            },
+            "Size": {
+                "Class 1": 27,
+                "Class 2": 19,
+                "Class 3": 22,
+                "Class 4": 16,
+                "Class 5": 24,
+                "Class 6": 12,
+                "Class 7": 19,
+                "Class 8": 11
+            },
+            "Type": {
+                "Box": 31,
+                "Ellipsoid": 72,
+                "Sphere": 47
+            }
+        }
+    }
 }

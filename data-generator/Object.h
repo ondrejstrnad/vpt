@@ -16,19 +16,21 @@ protected:
     uchar _type; // 0=undefined, 1=sphere, 2=ellipsoid, 3=box
     uchar _size; // 8 size classes
     uchar _orientation; // 8 possible orientations
+
+    QString _name;
 public:
-    Object(uchar id, uchar type, QVector3D position, uchar value, uchar size, uchar orientation) {
+    Object(uchar id, QString name, uchar type, QVector3D position, uchar value, uchar size, uchar orientation) {
         this->_id = id;
         this->_position = position;
         this->_value = value;
         this->_type = type;
         this->_orientation = orientation;
         this->_size = size;
+        this->_name = name;
 
         switch(orientation) {
             default:
-            case 0: // random rotation
-            case 7:
+            case 0: // random rotation            
                 this->_rotation = QQuaternion::fromEulerAngles(qrand() % 360 - 180, qrand() % 360 - 180, qrand() % 360 - 180);
                 break;
             case 1: // no rotation // front - yaw
@@ -49,6 +51,9 @@ public:
             case 6: // diagonal
                 this->_rotation = QQuaternion::fromEulerAngles(45, 45, 45);
                 break;
+            case 7: // inverse diagonal
+                this->_rotation = QQuaternion::fromEulerAngles(-45, -45, -45);
+                break;
         }
     }
 
@@ -61,6 +66,7 @@ public:
     inline uchar getType() { return _type; }
     inline uchar getSize() { return _size; }
     inline uchar getOrientation() { return _orientation; }
+    inline QString getName() { return this->_name; }
 
     virtual bool contains(QVector3D point) = 0;
     virtual QList<QVector3D> getBoundingBox() = 0;
